@@ -23,7 +23,7 @@ module SwitchbloxEvents
     end
 
     def update
-      @event.update_attributes(params[:event])
+      @event.update_attributes(event_params)
     end
 
     def destroy
@@ -38,7 +38,7 @@ module SwitchbloxEvents
       end
 
       def event_params
-        params.require(:event).permit(:name)
+        params.require(:event).permit(:title, :date, :start_time, :end_time, :venue, :details, :rsvp)
       end
 
   end
