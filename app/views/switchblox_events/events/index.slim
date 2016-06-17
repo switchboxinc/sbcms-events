@@ -1,0 +1,12 @@
+.panel.panel-default
+  .panel-heading
+    .panel-title Events
+  .panel-body
+    table.table.table-striped
+      tr
+        th Event Name
+        th Actions
+      - @events.each do |event|
+        tr
+          td = event.name
+          td
