@@ -1,0 +1,10 @@
+= simple_form_for Rsvp.new, url: events_path, method: :post, do |f|
+  .row
+    = f.input :full_name
+  .row
+    = f.input :email_address
+  .row
+    = f.input :phone_number
+    = f.input :event_id, as: :hidden, value: params[:id]
+  .row
+    = f.submit 'RSVP', class: 'btn btn-success pull-right'

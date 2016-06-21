@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    .panel-title = @event.title
+  .panel-body
+    .row
+      h3.col-xs-6 = @event.date
+      .col-xs-3 = @event.start_time
+      .col-xs-3 = @event.end_time
+    .row
+      = @event.venue
+    .row
+      = @event.details
+    - if @event.rsvp
+      = render 'switchblox_events/events/rsvp'

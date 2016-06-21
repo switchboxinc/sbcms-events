@@ -38,7 +38,7 @@ module SwitchbloxEvents
       end
 
       def event_params
-        params.require(:event).permit(:name)
+        params.require(:event).permit(:title, :date, :start_time, :end_time, :venue, :details, :rsvp, rsvp_attributes: [ :email, :phone_number, :full_name, :event_id ] )
       end
 
   end
